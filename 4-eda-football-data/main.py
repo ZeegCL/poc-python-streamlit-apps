@@ -43,7 +43,7 @@ st.dataframe(df_selected_team.astype(str))
 def filedownload(df):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
-    href = f"<a href='data:file/csv;base64,{b64}' download='NBA_Player_Stats_{selected_year}.csv'>Download CSV file</a>"
+    href = f"<a href='data:file/csv;base64,{b64}' download='NFL_Player_Stats_{selected_year}.csv'>Download CSV file</a>"
     return href
 
 st.markdown(filedownload(df_selected_team), unsafe_allow_html=True)
